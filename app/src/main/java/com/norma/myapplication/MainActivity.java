@@ -1,7 +1,6 @@
 package com.norma.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -11,14 +10,8 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity
 {
     //region>>控件绑定
-    @BindView(R.id.btn01)
-    Button btn01;
-
-    @BindView(R.id.btn02)
-    Button btn02;
-
-    @BindView(R.id.btn03)
-    Button btn03;
+    @BindView(R.id.btnDrugCheckup)
+    Button btnDrugCheckup;
     //endregion
 
     @Override
@@ -34,10 +27,11 @@ public class MainActivity extends BaseActivity
         return R.layout.activity_main;
     }
 
-    @OnClick(R.id.btn01)
-    public void btn01_OnClick()
+    //配药核对
+    @OnClick(R.id.btnDrugCheckup)
+    public void btnDrugCheckup_OnClick()
     {
-        Toast.makeText(this,"模块一",Toast.LENGTH_SHORT).show();
+        Intent intent =new Intent(MainActivity.this,DrugCheckupActivity.class);
+        startActivity(intent);
     }
-
 }
