@@ -39,8 +39,8 @@ public abstract class BaseActivity extends AppCompatActivity
     }
     //endregion
 
-    //初始化Activity
-    @Override
+
+    @Override //初始化Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
